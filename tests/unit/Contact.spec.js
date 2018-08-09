@@ -1,7 +1,7 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import Page from '@/views/Contact.vue'
 import Vuetify from 'vuetify'
-import Vuex from 'Vuex'
+import Vuex from 'vuex'
 
 // create an extended `Vue` constructor
 const localVue = createLocalVue()
