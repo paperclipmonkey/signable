@@ -78,22 +78,11 @@
       color="blue darken-3"
       dark
       app
-      fixed
-    >
+      fixed>
       <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <span class="hidden-sm-and-down">Signable</span>
       </v-toolbar-title>
-      <!-- <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="search"
-        label="Search"
-        class="hidden-sm-and-down"
-        v-model="search"
-      ></v-text-field>
-      <v-spacer></v-spacer> -->
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -109,6 +98,7 @@ export default {
     drawer: null,
     // search: '',
     items: [
+      { icon: 'home', text: 'Home', page: 'home' },
       { icon: 'contacts', text: 'Contacts', page: 'contacts' },
       { icon: 'email', text: 'Envelopes', page: 'envelopes' },
       { icon: 'description', text: 'Templates', page: 'templates' },
