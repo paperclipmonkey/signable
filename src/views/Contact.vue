@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
-        Contact {{getContactById(this.$route.params.contactid)}}
+        Contact
         <v-card>
           <v-card-title
             class="grey lighten-4 py-4 title">
@@ -72,11 +72,6 @@ export default {
       v => /.+@.+/.test(v) || 'E-mail must be valid'
     ]
   }),
-  watch: {
-    myContact () {
-      this.loadContact(this.$route.params.contactid)
-    }
-  },
   mounted () {
     this.loadContact(this.$route.params.contactid)
   },
@@ -85,12 +80,12 @@ export default {
       get () {
         return this.$store.getters.getContactById(this.$route.params.contactid)
       }
-    },
-    getContactById: {
-      get () {
-        return this.$store.getters.getContactById
-      }
     }
+    // getContactById: {
+    //   get () {
+    //     return this.$store.getters.getContactById
+    //   }
+    // }
   },
   methods: {
     ...mapActions([
