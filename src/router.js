@@ -38,6 +38,11 @@ export default new Router({
     //   component: () => import(/* webpackChunkName: "about" */ './views/Envelope.vue')
     // },
     {
+      path: '/templates',
+      name: 'templates',
+      component: () => import(/* webpackChunkName: "about" */ './views/Templates.vue')
+    },
+    {
       path: '/settings',
       name: 'settings',
       component: () => import(/* webpackChunkName: "about" */ './views/Settings.vue')
